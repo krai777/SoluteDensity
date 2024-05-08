@@ -1,5 +1,5 @@
 # SoluteDensity
-this python code is useful for calculating solute density over Molecular Dynamics Simulation trajectories
+This python code is useful for calculating solute density over Molecular Dynamics Simulation trajectories
 First let's discuss what this code actually do ?
 you have to provide the topology file and your trajectory file , so here i am using MDAnalysis library so it can understand mostof file extensions of different softwares.
 For applying this code for your system replace following things:
