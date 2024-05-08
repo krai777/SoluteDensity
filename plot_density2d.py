@@ -10,15 +10,18 @@ from gridData import Grid
 
 import numpy as np
 import matplotlib.pyplot as plt
-#matplotlib inline
 
+#creating sysytem universe 
+#change here according to your system files
 u = mda.Universe('../../lipid_WI.psf','../final.dcd')
 from MDAnalysis.analysis.density import DensityAnalysis
+#make selction for calculating density
 glu = u.select_atoms("resname AGLC")
 D = DensityAnalysis(glu, delta=1)
 D.run()
 D.density.export("Glu.dx", type="double")
 grid = D.results.density.grid
+#it iwll give you shape of grid matrix
 grid.shape
 avg = grid.mean(axis=1)  # Modify axis here to plot along Y-axis
 avg.shape
